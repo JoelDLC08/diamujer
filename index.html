@@ -6,42 +6,183 @@
   <title>Feliz Día de la Mujer</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f0e4d7;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #f8edeb, #fcd5ce, #f9dcc4);
       text-align: center;
-      padding: 50px;
+      padding: 30px;
+      color: #33272a;
+      line-height: 1.6;
+      margin: 0;
+    }
+    .container {
+      max-width: 850px;
+      margin: 0 auto;
+    }
+    header {
+      margin-bottom: 30px;
     }
     h1 {
-      color: #e91e63;
+      color: #9d4edd;
+      font-size: 2.5em;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+      margin-bottom: 10px;
+    }
+    .subtitle {
+      font-size: 1.2em;
+      color: #5a189a;
+      margin-bottom: 20px;
     }
     p {
-      font-size: 1.2em;
-      color: #333;
+      font-size: 1.1em;
     }
-    img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 10px;
-    }
-    .message {
-      background-color: #f8bbd0;
+    .banner {
+      background-color: rgba(255, 255, 255, 0.7);
       padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      margin: 30px 0;
+    }
+    .special-message {
+      font-style: italic;
+      font-weight: bold;
+      color: #5a189a;
+    }
+    .profile-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 20px;
+      margin: 40px 0;
+    }
+    .profile-card {
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 15px;
+      padding: 25px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      width: 220px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .profile-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    }
+    .profile-image {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 15px;
+      border: 5px solid #9d4edd;
+    }
+    .profile-name {
+      color: #9d4edd;
+      font-size: 1.5em;
+      margin: 10px 0;
+    }
+    .profile-message {
+      text-align: left;
+      font-size: 0.95em;
+    }
+    .quote {
+      font-style: italic;
+      color: #5a189a;
+      margin: 15px 0;
+    }
+    footer {
+      margin-top: 50px;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.6);
       border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      margin: 20px 0;
+    }
+    .heart {
+      color: #e91e63;
+      font-size: 1.5em;
+    }
+    .signature {
+      font-family: 'Brush Script MT', cursive;
+      font-size: 1.5em;
+      margin-top: 10px;
+      color: #9d4edd;
+    }
+    .flower {
+      display: inline-block;
+      font-size: 24px;
+      margin: 0 10px;
+      color: #e91e63;
+    }
+    @media (max-width: 768px) {
+      .profile-section {
+        flex-direction: column;
+        align-items: center;
+      }
+      .profile-card {
+        width: 80%;
+      }
+    }
+    .floating {
+      animation: float 3s ease-in-out infinite;
+    }
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
     }
   </style>
 </head>
 <body>
+  <div class="container">
+    <header>
+      <h1 class="floating">✨ Feliz Día de la Mujer ✨</h1>
+      <div class="subtitle">Para tres mujeres extraordinarias</div>
+      <p class="special-message">Hoy y todos los días, celebramos su fuerza, su talento y su luz</p>
+    </header>
 
-  <h1>Feliz Día de la Mujer</h1>
-  <img src="https://via.placeholder.com/600x300" alt="Imagen inspiradora">
+    <div class="banner">
+      <p>En este día especial, queremos celebrar no solo la historia de lucha por los derechos de las mujeres, sino también reconocer a las increíbles mujeres que cada día hacen de nuestro equipo un lugar mejor con su esfuerzo, creatividad y dedicación.</p>
+    </div>
 
-  <div class="message">
-    <p>Hoy celebramos el coraje, la fuerza y la dedicación de todas las mujeres. ¡Gracias por ser tan increíbles!</p>
+    <div class="profile-section">
+      <!-- Perfil de Vicky -->
+      <div class="profile-card">
+        <img src="/api/placeholder/150/150" alt="Vicky" class="profile-image">
+        <h2 class="profile-name">Vicky</h2>
+        <div class="profile-message">
+          <p>Tu dedicación y creatividad nos inspiran cada día. Tu capacidad para encontrar soluciones y tu entusiasmo contagioso hacen de ti una compañera excepcional.</p>
+          <p class="quote">"Las mujeres que luchan son mujeres sin miedo"</p>
+        </div>
+      </div>
+
+      <!-- Perfil de Lulu -->
+      <div class="profile-card">
+        <img src="/api/placeholder/150/150" alt="Lulu" class="profile-image">
+        <h2 class="profile-name">Lulu</h2>
+        <div class="profile-message">
+          <p>Tu alegría y empatía transforman nuestro ambiente laboral. Tu compromiso y la pasión que pones en cada proyecto son un ejemplo para todos nosotros.</p>
+          <p class="quote">"Una mujer con determinación tiene el poder de cambiar el mundo"</p>
+        </div>
+      </div>
+
+      <!-- Perfil de Karla -->
+      <div class="profile-card">
+        <img src="/api/placeholder/150/150" alt="Karla" class="profile-image">
+        <h2 class="profile-name">Karla</h2>
+        <div class="profile-message">
+          <p>Tu inteligencia y liderazgo natural nos guían hacia la excelencia. Tu fortaleza ante los desafíos y tu capacidad de innovación son cualidades que admiramos profundamente.</p>
+          <p class="quote">"El futuro es femenino"</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="banner">
+      <p>Gracias por formar parte de nuestro equipo y por todo lo que aportan día a día con su talento y dedicación.</p>
+      <p>Que este día sea un recordatorio del valor y la importancia de su presencia en nuestras vidas.</p>
+    </div>
+
+    <footer>
+      <p><span class="flower">🌷</span> Celebrando la grandeza de ser mujer <span class="flower">🌷</span></p>
+      <p>Con admiración y cariño <span class="heart">❤</span></p>
+      <div class="signature">Tu Equipo</div>
+    </footer>
   </div>
-
-  <p>¡Que este día sea solo el comienzo de un camino lleno de amor, respeto y igualdad!</p>
-
 </body>
 </html>
